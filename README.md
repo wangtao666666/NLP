@@ -2,6 +2,7 @@
 NLP相关知识
 
 Word2Vec
+
     两种方法(CBOW、Skip-Gram) + 两种改进(负采样、层次softmax)
     CBOW + 负采样:       CBOW_NEG_model_train.py
     CBOW + 层次softmax:  CBOW_HS_model_train.py
