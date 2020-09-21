@@ -52,7 +52,7 @@ class SkipGramModel(nn.Module):
         neg_socre = torch.mul(neg_emb_w, neg_emb_v).squeeze()
         neg_socre = torch.sum(neg_socre, dim=1)
         neg_score = torch.clamp(neg_socre, max=10, min=-10)
-        neg_socre = F.logsigmoid(-neg_socre)
+        neg_socre = F.logsigmoid(-neg_score)
 
         loss = -1 * (torch.sum(score) + torch.sum(neg_socre))
 

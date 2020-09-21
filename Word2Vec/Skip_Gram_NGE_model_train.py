@@ -15,10 +15,10 @@ import argumentparser as argumentparser
 args = argumentparser.SKip_Gram_NGE_ArgumentParser()
 WINDOW_SIZE = args.window_size  # 上下文窗口c
 BATCH_SIZE = args.batch_size  # mini-batch
-MIN_COUNT = args.min_count  # 需要剔除的 低频词 的频
+MIN_COUNT = args.min_count  # 需要剔除的 低频词 的词
 EMB_DIMENSION = args.embed_dimension  # embedding维度
 LR = args.learning_rate  # 学习率
-
+NEG_COUNT = args.neg_count  # 负采样数
 
 class Word2Vec:
     def __init__(self, input_file_name, output_file_name):
